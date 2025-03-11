@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Author: Myungin Lee. Spring 2024
+// Author: Myungin Lee. 
 // This codes shows how to specify, clone, and manipulate the game objects using rigidbody components
 
 public class Chaser : MonoBehaviour
@@ -39,11 +39,11 @@ public class Chaser : MonoBehaviour
         {
             // let the monkeys(clones) find the player(target)
             clones[i].transform.LookAt(player.transform.position);
-            
             // Derive the vector between the player and monkeys
             Vector3 target = player.transform.position - clones[i].transform.position;
             // Decide velocity of monkeys based on the normalized vector (a vector with the direction but the size is always 1)
-            clones[i].GetComponent<Rigidbody>().velocity = target.normalized; // Of course you can try something else
+            clones[i].GetComponent<Rigidbody>().linearVelocity = target.normalized * AudioSpectrum.audioAmp * 2f; // Of course you can try something else.. 
+                                                                                    // monkeys react to the music
         }
 
     }
