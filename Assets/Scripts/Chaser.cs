@@ -10,7 +10,7 @@ public class Chaser : MonoBehaviour
     GameObject player;
     GameObject monkey;
     GameObject[] clones;
-    int numberOfMonkeys = 10;
+    int numberOfMonkeys = 30;
     const float sponRange = 20;
 
     void Awake()
@@ -42,7 +42,7 @@ public class Chaser : MonoBehaviour
             // Derive the vector between the player and monkeys
             Vector3 target = player.transform.position - clones[i].transform.position;
             // Decide velocity of monkeys based on the normalized vector (a vector with the direction but the size is always 1)
-            clones[i].GetComponent<Rigidbody>().linearVelocity = target.normalized * AudioSpectrum.audioAmp * 2f; // Of course you can try something else.. 
+            clones[i].GetComponent<Rigidbody>().linearVelocity = target.normalized * 2f; // Of course you can try something else.. 
                                                                                     // monkeys react to the music
         }
 
