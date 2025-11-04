@@ -29,37 +29,11 @@ public class PlayerMovement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        float magnitude = Mathf.Clamp01(movementDirection.magnitude) * speed;
+        // Mathf.Clamp01: a function in Unity that limits a given value to the range of 0 to 1. If the input value is less than 0, it returns 0; if it's greater than 1, it returns 1
+        float magnitude = Mathf.Clamp01(movementDirection.magnitude) * speed; 
         movementDirection.Normalize();
 
         ySpeed += Physics.gravity.y * Time.deltaTime;
-
-        if (characterController.isGrounded)
-        {
-            lastGroundedTime = Time.time;
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            jumpButtonPressedTime = Time.time;
-        }
-
-        if (Time.time - lastGroundedTime <= jumpButtonGracePeriod)
-        {
-            characterController.stepOffset = originalStepOffset;
-            ySpeed = -0.5f;
-
-            if (Time.time - jumpButtonPressedTime <= jumpButtonGracePeriod)
-            {
-                ySpeed = jumpSpeed;
-                jumpButtonPressedTime = null;
-                lastGroundedTime = null;
-            }
-        }
-        else
-        {
-            characterController.stepOffset = 0;
-        }
 
         Vector3 velocity = movementDirection * magnitude;
         velocity.y = ySpeed;
