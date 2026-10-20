@@ -10,7 +10,7 @@ public class Chaser : MonoBehaviour
     GameObject player;
     GameObject monkey;
     GameObject[] clones;
-    int numberOfMonkeys = 30;
+    int numberOfMonkeys = 50;
     const float sponRange = 20;
 
     void Awake()
