@@ -256,7 +256,7 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190826896}
   m_Enabled: 1
-  serializedVersion: 12
+  serializedVersion: 13
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
@@ -308,7 +308,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShadowRadius: 0
+  m_ShapeRadius: 0
   m_ShadowAngle: 0
   m_LightUnit: 1
   m_LuxAtDistance: 1
@@ -1581,27 +1581,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ac6486551595b2e4da043a777648191b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 102.92
+      value: 680.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac6486551595b2e4da043a777648191b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 102.92
+      value: 680.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac6486551595b2e4da043a777648191b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 102.92
+      value: 680.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac6486551595b2e4da043a777648191b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.41
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac6486551595b2e4da043a777648191b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.91795
+      value: 3.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac6486551595b2e4da043a777648191b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 6.38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ac6486551595b2e4da043a777648191b, type: 3}
       propertyPath: m_LocalRotation.w
