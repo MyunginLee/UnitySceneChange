@@ -37,10 +37,11 @@ public class UnityPlayerController : MonoBehaviour
     private void FixedUpdate()
     {   // How to use manul input (GetKeyDown Approach)
         if(Input.GetKeyDown(KeyCode.Q)){
-            Debug.Log("Q!");
+            Debug.Log("Q down");
         }
-        if (Input.GetKeyUp(KeyCode.E)) {
-            Debug.Log("E!");
+        else if (Input.GetKeyUp(KeyCode.Q))
+        {
+            Debug.Log("Q up");
         }
     }
 
