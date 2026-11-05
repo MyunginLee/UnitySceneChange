@@ -34,6 +34,16 @@ public class UnityPlayerController : MonoBehaviour
         jumpAction.action.Disable();
     }
 
+    private void FixedUpdate()
+    {   // How to use manul input (GetKeyDown Approach)
+        if(Input.GetKeyDown(KeyCode.Q)){
+            Debug.Log("Q!");
+        }
+        if (Input.GetKeyUp(KeyCode.E)) {
+            Debug.Log("E!");
+        }
+    }
+
     void Update()
     {
         // 1. Read movement input (x: left/right, y: forward/backward).
