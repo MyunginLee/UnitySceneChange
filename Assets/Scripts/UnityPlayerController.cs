@@ -95,6 +95,6 @@ public class UnityPlayerController : MonoBehaviour
         }
 
         // 6. Play the walking animation while moving on the ground.
-        animator.SetBool("IsMoving", move != Vector3.zero && isGrounded);
+        //animator.SetBool("IsMoving", move != Vector3.zero && isGrounded);
     }
 }
